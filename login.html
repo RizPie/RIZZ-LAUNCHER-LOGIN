@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizz Launcher Login</title>
+    <style>
+        body {
+            background-color: #8B4513; /* Dirt brown */
+            font-family: 'Minecraft', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="10" height="10" fill="%23654321"/><rect x="10" width="10" height="10" fill="%238B4513"/><rect y="10" width="10" height="10" fill="%238B4513"/><rect x="10" y="10" width="10" height="10" fill="%23654321"/></svg>');
+            background-size: 20px 20px;
+        }
+        .container {
+            background-color: rgba(101, 67, 33, 0.9); /* Semi-transparent dark brown */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            border: 3px solid #FFD700; /* Gold border */
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #FFD700; /* Gold */
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            background-color: #654321;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="text"]::placeholder, input[type="password"]::placeholder {
+            color: #CCCCCC;
+        }
+        button {
+            background-color: #FFD700; /* Gold */
+            color: #654321;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #FFA500; /* Orange */
+        }
+        .link {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .minecraft-font {
+            font-family: 'Courier New', monospace; /* Minecraft-like font */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="minecraft-font">Rizz Launcher Login</h1>
+        <form id="loginForm" action="/login" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <button onclick="window.location.href='/microsoft'">Login with Microsoft</button>
+        <button onclick="const username = prompt('Enter username for offline play:'); if(username) window.location.href='/offline?username=' + encodeURIComponent(username)">Offline Login</button>
+        <p><a href="register.html" class="link">Don't have an account? Register here</a></p>
+    </div>
+</body>
+</html>
